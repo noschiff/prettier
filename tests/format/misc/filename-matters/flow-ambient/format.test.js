@@ -3,6 +3,10 @@ const tests = [
     code: "const foo: string;",
     baseFilename: "const-without-initializer",
   },
+  {
+    code: "let foo!: string;",
+    baseFilename: "definite-assignment",
+  },
 ].flatMap(({ code, baseFilename }) =>
   [".js.flow", ".unknown", ".unset-filepath"].map((extension) => {
     const filename = `${baseFilename}${extension}`;
@@ -22,7 +26,11 @@ runFormatTest(
   ["flow"],
   {
     errors: {
-      flow: ["const-without-initializer.unknown"],
+      flow: [
+        "const-without-initializer.unknown",
+        "definite-assignment.js.flow",
+        "definite-assignment.unset-filepath",
+      ],
     },
   },
 );

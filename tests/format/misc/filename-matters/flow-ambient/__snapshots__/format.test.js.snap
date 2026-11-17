@@ -30,3 +30,29 @@ const foo: string;
 
 ================================================================================
 `;
+
+exports[`snippet: definite-assignment.js.flow format 1`] = `
+"A definite assignment assertion \`!\` is not permitted in this context. It can only be used on a \`let\` or \`var\` declaration, and not in the head of a \`for\` loop, a \`declare\` statement, a declaration file, or a \`declare module\` or \`declare namespace\` body. (1:8)
+> 1 | let foo!: string;
+    |        ^
+Cause: A definite assignment assertion \`!\` is not permitted in this context. It can only be used on a \`let\` or \`var\` declaration, and not in the head of a \`for\` loop, a \`declare\` statement, a declaration file, or a \`declare module\` or \`declare namespace\` body. (1:7)"
+`;
+
+exports[`snippet: definite-assignment.unknown format 1`] = `
+====================================options=====================================
+parsers: ["flow"]
+                                                      printWidth: 80 (default) |
+=====================================input======================================
+let foo!: string;
+=====================================output=====================================
+let foo!: string;
+
+================================================================================
+`;
+
+exports[`snippet: definite-assignment.unset-filepath format 1`] = `
+"A definite assignment assertion \`!\` is not permitted in this context. It can only be used on a \`let\` or \`var\` declaration, and not in the head of a \`for\` loop, a \`declare\` statement, a declaration file, or a \`declare module\` or \`declare namespace\` body. (1:8)
+> 1 | let foo!: string;
+    |        ^
+Cause: A definite assignment assertion \`!\` is not permitted in this context. It can only be used on a \`let\` or \`var\` declaration, and not in the head of a \`for\` loop, a \`declare\` statement, a declaration file, or a \`declare module\` or \`declare namespace\` body. (1:7)"
+`;

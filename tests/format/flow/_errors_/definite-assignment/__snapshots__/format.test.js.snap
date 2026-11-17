@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`snippet: #0 format 1`] = `
+"Declarations with definite assignment assertions must also have type annotations. (1:6)
+> 1 | let x!
+    |      ^
+Cause: Declarations with definite assignment assertions must also have type annotations. (1:5)"
+`;
+
+exports[`snippet: #1 format 1`] = `
+"Declarations with initializers cannot also have definite assignment assertions. (1:6)
+> 1 | let x! = 1
+    |      ^
+Cause: Declarations with initializers cannot also have definite assignment assertions. (1:5)"
+`;
+
+exports[`snippet: #2 format 1`] = `
+"Declarations with initializers cannot also have definite assignment assertions. (1:6)
+> 1 | let x!: number = 1
+    |      ^
+Cause: Declarations with initializers cannot also have definite assignment assertions. (1:5)"
+`;
+
+exports[`snippet: #3 format 1`] = `
+"Declarations with definite assignment assertions must also have type annotations. (1:11)
+> 1 | class C {x!}
+    |           ^
+Cause: Declarations with definite assignment assertions must also have type annotations. (1:10)"
+`;
+
+exports[`snippet: #4 format 1`] = `
+"Declarations with initializers cannot also have definite assignment assertions. (1:11)
+> 1 | class C {x!: number = 1}
+    |           ^
+Cause: Declarations with initializers cannot also have definite assignment assertions. (1:10)"
+`;
+
+exports[`snippet: #5 format 1`] = `
+"A definite assignment assertion \`!\` is not permitted in this context. It cannot be used on a \`declare\`, \`static\` or \`abstract\` field, in a declaration file, or in a \`declare module\` or \`declare namespace\` body. (1:18)
+> 1 | class C {static x!: number}
+    |                  ^
+Cause: A definite assignment assertion \`!\` is not permitted in this context. It cannot be used on a \`declare\`, \`static\` or \`abstract\` field, in a declaration file, or in a \`declare module\` or \`declare namespace\` body. (1:17)"
+`;
+
+exports[`snippet: #6 format 1`] = `
+"A definite assignment assertion \`!\` is not permitted in this context. It cannot be used on a \`declare\`, \`static\` or \`abstract\` field, in a declaration file, or in a \`declare module\` or \`declare namespace\` body. (1:19)
+> 1 | class C {declare x!: number}
+    |                   ^
+Cause: A definite assignment assertion \`!\` is not permitted in this context. It cannot be used on a \`declare\`, \`static\` or \`abstract\` field, in a declaration file, or in a \`declare module\` or \`declare namespace\` body. (1:18)"
+`;
+
+exports[`snippet: #7 format 1`] = `
+"A definite assignment assertion \`!\` is not permitted in this context. It cannot be used on a \`declare\`, \`static\` or \`abstract\` field, in a declaration file, or in a \`declare module\` or \`declare namespace\` body. (1:29)
+> 1 | abstract class C {abstract x!: number}
+    |                             ^
+Cause: A definite assignment assertion \`!\` is not permitted in this context. It cannot be used on a \`declare\`, \`static\` or \`abstract\` field, in a declaration file, or in a \`declare module\` or \`declare namespace\` body. (1:28)"
+`;
+
+exports[`snippet: #8 format 1`] = `
+"A definite assignment assertion \`!\` is not permitted in this context. It can only be used on a \`let\` or \`var\` declaration, and not in the head of a \`for\` loop, a \`declare\` statement, a declaration file, or a \`declare module\` or \`declare namespace\` body. (1:14)
+> 1 | declare let x!: number
+    |              ^
+Cause: A definite assignment assertion \`!\` is not permitted in this context. It can only be used on a \`let\` or \`var\` declaration, and not in the head of a \`for\` loop, a \`declare\` statement, a declaration file, or a \`declare module\` or \`declare namespace\` body. (1:13)"
+`;
+
+exports[`snippet: #9 format 1`] = `
+"A definite assignment assertion \`!\` is not permitted in this context. It can only be used on a \`let\` or \`var\` declaration, and not in the head of a \`for\` loop, a \`declare\` statement, a declaration file, or a \`declare module\` or \`declare namespace\` body. (1:11)
+> 1 | for (let x!: number of xs) {}
+    |           ^
+Cause: A definite assignment assertion \`!\` is not permitted in this context. It can only be used on a \`let\` or \`var\` declaration, and not in the head of a \`for\` loop, a \`declare\` statement, a declaration file, or a \`declare module\` or \`declare namespace\` body. (1:10)"
+`;

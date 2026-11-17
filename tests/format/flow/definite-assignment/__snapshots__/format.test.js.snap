@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`asi.js - {"semi":false} format 1`] = `
+====================================options=====================================
+parsers: ["flow"]
+semi: false
+                                                      printWidth: 80 (default) |
+=====================================input======================================
+let x
+!function() {};
+
+=====================================output=====================================
+let x
+!function () {}
+
+================================================================================
+`;
+
+exports[`asi.js format 1`] = `
+====================================options=====================================
+parsers: ["flow"]
+                                                      printWidth: 80 (default) |
+=====================================input======================================
+let x
+!function() {};
+
+=====================================output=====================================
+let x;
+!function () {};
+
+================================================================================
+`;
+
+exports[`class-fields.js - {"semi":false} format 1`] = `
+====================================options=====================================
+parsers: ["flow"]
+semi: false
+                                                      printWidth: 80 (default) |
+=====================================input======================================
+class Box {
+  value!: number;
+  #secret!: string;
+  readonly fixed!: number;
+  +covariant!: number;
+  -contravariant!: number;
+  [computed]!: number;
+  'quoted'!: number;
+  42!: number;
+  static!: number;
+  get!: number;
+  declare!: number;
+  /* before */ commented /* name */ ! /* bang */ : number;
+  veryLongFieldNameThatGoesOnAndOn!: Map<string, Array<{key: string, value: number}>>;
+}
+
+class Derived extends Box {
+  override value!: number;
+}
+
+=====================================output=====================================
+class Box {
+  value!: number
+  #secret!: string;
+  readonly fixed!: number;
+  +covariant!: number;
+  -contravariant!: number;
+  [computed]!: number
+  quoted!: number
+  42!: number
+  static!: number
+  get!: number
+  declare!: number
+  /* before */ commented /* name */! /* bang */ : number
+  veryLongFieldNameThatGoesOnAndOn!: Map<
+    string,
+    Array<{ key: string, value: number }>,
+  >
+}
+
+class Derived extends Box {
+  override value!: number
+}
+
+================================================================================
+`;
+
+exports[`class-fields.js format 1`] = `
+====================================options=====================================
+parsers: ["flow"]
+                                                      printWidth: 80 (default) |
+=====================================input======================================
+class Box {
+  value!: number;
+  #secret!: string;
+  readonly fixed!: number;
+  +covariant!: number;
+  -contravariant!: number;
+  [computed]!: number;
+  'quoted'!: number;
+  42!: number;
+  static!: number;
+  get!: number;
+  declare!: number;
+  /* before */ commented /* name */ ! /* bang */ : number;
+  veryLongFieldNameThatGoesOnAndOn!: Map<string, Array<{key: string, value: number}>>;
+}
+
+class Derived extends Box {
+  override value!: number;
+}
+
+=====================================output=====================================
+class Box {
+  value!: number;
+  #secret!: string;
+  readonly fixed!: number;
+  +covariant!: number;
+  -contravariant!: number;
+  [computed]!: number;
+  quoted!: number;
+  42!: number;
+  static!: number;
+  get!: number;
+  declare!: number;
+  /* before */ commented /* name */! /* bang */ : number;
+  veryLongFieldNameThatGoesOnAndOn!: Map<
+    string,
+    Array<{ key: string, value: number }>,
+  >;
+}
+
+class Derived extends Box {
+  override value!: number;
+}
+
+================================================================================
+`;
+
+exports[`variables.js - {"semi":false} format 1`] = `
+====================================options=====================================
+parsers: ["flow"]
+semi: false
+                                                      printWidth: 80 (default) |
+=====================================input======================================
+let count!: number;
+let first!: number, second!: string;
+var total!: number;
+export let exported!: number;
+let /* before */ commented /* name */ ! /* bang */ : number;
+let veryLongVariableNameThatGoesOnAndOn!: Map<string, Array<{key: string, value: number}>>;
+
+=====================================output=====================================
+let count!: number
+let first!: number, second!: string
+var total!: number
+export let exported!: number
+let /* before */ commented! /* name */ /* bang */ : number
+let veryLongVariableNameThatGoesOnAndOn!: Map<
+  string,
+  Array<{ key: string, value: number }>,
+>
+
+================================================================================
+`;
+
+exports[`variables.js format 1`] = `
+====================================options=====================================
+parsers: ["flow"]
+                                                      printWidth: 80 (default) |
+=====================================input======================================
+let count!: number;
+let first!: number, second!: string;
+var total!: number;
+export let exported!: number;
+let /* before */ commented /* name */ ! /* bang */ : number;
+let veryLongVariableNameThatGoesOnAndOn!: Map<string, Array<{key: string, value: number}>>;
+
+=====================================output=====================================
+let count!: number;
+let first!: number, second!: string;
+var total!: number;
+export let exported!: number;
+let /* before */ commented! /* name */ /* bang */ : number;
+let veryLongVariableNameThatGoesOnAndOn!: Map<
+  string,
+  Array<{ key: string, value: number }>,
+>;
+
+================================================================================
+`;
